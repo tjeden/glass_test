@@ -2,8 +2,8 @@ google_defaults: &google_defaults
   scopes: [userinfo.email, userinfo.profile]
   glass_scopes: [userinfo.email, userinfo.profile, glass.timeline]
 development:
-  client_id: CLIENT_ID
-  client_secret: CLIENT_SECRET
+  client_id: 209028873408.apps.googleusercontent.com
+  client_secret: 3Y9JSGKyCZgryld2xNBNP7pN
   <<: *google_defaults
 test:
   client_id: CLIENT_ID

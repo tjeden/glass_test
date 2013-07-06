@@ -11,7 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130706094543) do
+ActiveRecord::Schema.define(:version => 20130706102704) do
+
+  create_table "glass_timeline_items", :force => true do |t|
+    t.string   "type"
+    t.integer  "google_account_id"
+    t.string   "glass_item_id"
+    t.boolean  "is_deleted"
+    t.string   "glass_etag"
+    t.string   "glass_self_link"
+    t.string   "glass_kind"
+    t.datetime "glass_created_at"
+    t.datetime "glass_updated_at"
+    t.string   "glass_content_type"
+    t.text     "glass_content"
+    t.datetime "display_time"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  add_index "glass_timeline_items", ["google_account_id"], :name => "index_glass_timeline_items_on_google_account_id"
 
   create_table "google_accounts", :force => true do |t|
     t.string   "token"
