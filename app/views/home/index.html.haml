@@ -1,0 +1,6 @@
+%h2 Hello
+= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
+
+%p
+  Number of users:
+  = User.count

@@ -38,3 +38,6 @@ gem 'jquery-rails'
 # gem 'debugger'
 gem "google-api-client" # this is a dependency
 gem 'glass-rails'
+gem 'devise'
+gem 'omniauth-google-oauth2'
+gem 'haml'
