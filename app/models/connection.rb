@@ -13,7 +13,9 @@ class Connection
       req.url '_ah/api/mirror/v1/timeline'
       req.headers['Content-Type'] = 'application/json'
       req.headers['Authorization'] = "Bearer #{@token}"
-      req.body = { "text" =>  msg}.to_json
+      req.body = {
+        "text" =>  msg, "menuItems" =>  [ { "action" => "TOGGLE_PINNED" }]
+      }.to_json
     end
     response.status
   end
