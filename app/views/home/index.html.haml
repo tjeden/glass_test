@@ -1,13 +1,8 @@
 %h2 Hello
-= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2)
+- if current_user
+  %p
+    = link_to 'poke Glass', poke_path
+  = link_to "log out", destroy_user_session_path, method: :delete
 
-%p
-  Number of users:
-  = User.count
-
-%p 
-  Google accounts:
-  = GoogleAccount.count
-
-%p
-  = link_to 'poke', poke_path
+- else
+  = link_to "sign in with Google", user_omniauth_authorize_path(:google_oauth2)

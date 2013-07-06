@@ -1,3 +1,28 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 100px;
+  background-image: image-url("google-glass-guy.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-size: 150%;
+}
+
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+}
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 7px;
+}

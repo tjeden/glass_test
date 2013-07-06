@@ -1,6 +1,4 @@
 class Glass::Tweet < Glass::TimelineItem
-
-
   defaults_template with: "table.html.erb"
 
 

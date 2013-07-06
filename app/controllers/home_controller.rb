@@ -3,7 +3,7 @@ class HomeController < ApplicationController
   end
 
   def poke
-    Connection.new.test(session[:token])
-    redirect_to root_path
+    code = Connection.new(session[:token]).create_subscription
+    redirect_to root_path, notice: "Message: #{code}"
   end
 end
